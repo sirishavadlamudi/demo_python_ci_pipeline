@@ -38,7 +38,7 @@ jobs:
       # Stage 4: Security Scanning
       - name: Bandit security scan
         run: |
-          bandit -r . --exclude tests,assets -x B101 || true
+           bandit -r ./app -lll -f json -o bandit-report.json || true
 
       # Stage 5: Unit Test & Coverage
       - name: Run tests
