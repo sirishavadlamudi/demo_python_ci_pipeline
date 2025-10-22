@@ -52,7 +52,7 @@ jobs:
 
       # Stage 7: Scan Docker Image for vulnerabilities
       - name: Scan Docker image (Trivy)
-        uses: aquasecurity/trivy-action@v1
+        uses: aquasecurity/trivy-action@master
         with:
           image-ref: ${{ env.DOCKER_IMAGE }}
 
